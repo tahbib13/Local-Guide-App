@@ -29,6 +29,8 @@ public class OnBoarding extends AppCompatActivity {
     Animation animation;
     int currentPos;
 
+    Button btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,14 +57,18 @@ public class OnBoarding extends AppCompatActivity {
 
     public  void  skip(View view){
 
+
         startActivity(new Intent(this, UserDashBoard.class));
+
         finish();
     }
 
     public  void  next(View view)
     {
+
         viewPager.setCurrentItem(currentPos + 1);
     }
+
 
     private void addDots(int position){
 
@@ -89,6 +95,9 @@ public class OnBoarding extends AppCompatActivity {
 
         }
 
+
+
+
         @Override
         public void onPageSelected(int position) {
             addDots(position);
@@ -112,6 +121,7 @@ public class OnBoarding extends AppCompatActivity {
 
 
         }
+
 
         @Override
         public void onPageScrollStateChanged(int state) {

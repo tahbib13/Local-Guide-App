@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
 
     //variable
     ImageView backgroundImage;
-    TextView poweredByLine;
+    TextView poweredByLine , hi;
 
     //Animations
 
@@ -35,22 +37,27 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.splash_screen);
 
         //Hooks
         backgroundImage = findViewById(R.id.background_image);
         poweredByLine = findViewById(R.id.powered_by_line);
 
+
         //Animations
 
-        side_anim = AnimationUtils.loadAnimation( this,R.anim.side_anim);
-        bottom_anim = AnimationUtils.loadAnimation( this,R.anim.bottom_anim);
+        side_anim = AnimationUtils.loadAnimation(this, R.anim.side_anim);
+        bottom_anim = AnimationUtils.loadAnimation(this, R.anim.bottom_anim);
 
-                //set animations on elements
+        //set animations on elements
 
         backgroundImage.setAnimation(side_anim);
         poweredByLine.setAnimation(bottom_anim);
+
+
+
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -74,7 +81,7 @@ public class SplashScreen extends AppCompatActivity {
                 }
 
                 else {
-                    Intent intent = new Intent(getApplicationContext(), UserDashBoard.class);
+                    Intent intent = new Intent(getApplicationContext(),UserDashBoard.class);
                     startActivity(intent);
                     finish();
                 }

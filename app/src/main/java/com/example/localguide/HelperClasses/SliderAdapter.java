@@ -20,6 +20,7 @@ public class SliderAdapter extends PagerAdapter {
 
     public SliderAdapter(Context context) {
         this.context = context;
+        layoutInflater = LayoutInflater.from(context);
     }
 
     int images[] = {
@@ -67,9 +68,20 @@ public class SliderAdapter extends PagerAdapter {
         TextView heading = view.findViewById(R.id.slider_heading);
         TextView desc = view.findViewById(R.id.slider_desc);
 
-        imageView.setImageResource(images[position]);
-        heading.setText(headings[position]);
-        desc.setText(descriptions[position]);
+        //imageView.setImageResource(images[position]);
+        //heading.setText(headings[position]);
+        //desc.setText(descriptions[position]);
+
+        if (position < images.length) {
+            imageView.setImageResource(images[position]);
+        }
+        if (position < headings.length) {
+            heading.setText(context.getString(headings[position]));
+        }
+        if (position < descriptions.length) {
+            desc.setText(context.getString(descriptions[position]));
+        }
+
 
         container.addView(view);
 

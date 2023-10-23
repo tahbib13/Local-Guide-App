@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightWhite"
+    android:background="@color/DarkViolet"
     android:padding="20dp"
     tools:context=".Common.OnBoarding">
 
@@ -17,6 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="skip"
+        android:background="@color/YellowGreen"
         android:padding="10dp"
         android:drawableEnd="@drawable/skip_icon"
         android:drawableRight="@drawable/skip_icon"/>
@@ -51,6 +52,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:text="@string/let_get_started"
+            android:backgroundTint="@color/YellowGreen"
             android:visibility="invisible"/>
 
         <LinearLayout
