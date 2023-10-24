@@ -27,7 +27,7 @@ public class SliderAdapter extends PagerAdapter {
 
             R.drawable.search_place,
             R.drawable.make_a_call,
-            R.drawable.add_missing_place,
+            R.drawable.missing_place_icoon,
             R.drawable.sit_back_and_relax
     };
 

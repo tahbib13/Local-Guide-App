@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Local Guide</string>
-    <string name="logo_name">Get a Way</string>
+    <string name="logo_name">Explore and Innovate</string>
     <string name="slogan_name">We will help you find out the path</string>
     <string name="powered_by">Powered By Tahbib and Toufik</string>
 
@@ -21,5 +21,38 @@
     <string name="skip_btn">Skip</string>
     <string name="next_btn">Next</string>
     <string name="let_get_started">Lets Get Started</string>
+
+    <!-- String For DashBoard -->
+
+    <string name="hotels">HOTELS</string>
+    <string name="restaurants">RESTAURANTS</string>
+    <string name="shops">SHOPS</string>
+    <string name="banks">BANKS</string>
+    <string name="airports">EDUCATION</string>
+
+
+    <!-- Tiles and Descriptions -->
+
+    <string name="featured_locations">All Featured Locations</string>
+    <string name="featured_locations_description">All the locations that are featured and have the top demand in town!</string>
+    <string name="most_viewed_locations">Most Viewed</string>
+    <string name="categories">Categories</string>
+    <string name="view_all">View All</string>
+    <string name="search_text">Search...</string>
+
+
+    <!-- String For Navigation -->
+    
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+    <string name="all_categories">ALL CATEGORIES</string>
+    <string name="add_missing_place">ADD MISSING PLACE</string>
+    <string name="login">LOGIN</string>
+    <string name="profile">PROFILE</string>
+    <string name="logout">LOGOUT</string>
+    <string name="education">EDUCATION</string>
+    <string name="share">SHARE</string>
+    <string name="rate_us">RATE US</string>
+
 
 </resources>
