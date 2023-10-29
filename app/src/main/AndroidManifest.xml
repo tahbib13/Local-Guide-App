@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LocalGuide"
         tools:targetApi="31">
+        <activity
+            android:name=".Common.LoginSignup.VerifyOTP"
+            android:exported="false" />
+        <activity
+            android:name=".Common.LoginSignup.SignUp3rdClass"
+            android:exported="false" />
+        <activity
+            android:name=".Common.LoginSignup.SignUp2ndClass"
+            android:exported="false" />
+        <activity
+            android:name=".Common.LoginSignup.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Common.LoginSignup.Login"
+            android:exported="false" />
+        <activity
+            android:name=".Common.LoginSignup.RetailerStartUpScreen"
+            android:exported="false" />
+        <activity
+            android:name=".User.AllCategories"
+            android:exported="false" />
         <activity
             android:name=".Common.OnBoarding"
             android:exported="false" />
@@ -28,8 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

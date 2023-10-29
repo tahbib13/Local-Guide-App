@@ -1,5 +1,7 @@
 package com.example.localguide.User;
 
+import static android.os.Build.VERSION_CODES;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -7,6 +9,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import android.content.ClipData;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
@@ -16,6 +22,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.localguide.Common.LoginSignup.RetailerStartUpScreen;
 import com.example.localguide.HelperClasses.HomeAdapter.CategoriesAdapter;
 import com.example.localguide.HelperClasses.HomeAdapter.CategoriesHelperClass;
 import com.example.localguide.HelperClasses.HomeAdapter.FeaturedAdapter;
@@ -100,7 +107,7 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
 
         //Add any color or remove it to use the default one!
         //To make it transparent use Color.Transparent in side setScrimColor();
-        //drawerLayout.setScrimColor(Color.TRANSPARENT);
+        drawerLayout.setScrimColor(getResources().getColor(R.color.purple));
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
@@ -118,10 +125,48 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
         });
     }
 
+    public void  callRetailerScreens(View view){
+        startActivity(new Intent(getApplicationContext(), RetailerStartUpScreen.class));
+    }
 
 
+
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else
+            super.onBackPressed();
+    }
+
+
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.nav_all_categories) {
+            Intent intent = new Intent(getApplicationContext(), AllCategories.class);
+            startActivity(intent);
+        }
+
+        /*switch (itemId)
+        {
+            case R.id.nav_all_categories
+                    Intent intent = new Intent(getApplicationContext(), AllCategories.class);
+                startActivity(intent);
+                break;
+        }*/
+
+
+
+
+
+        return true;
+    }
 
     //Recycler Views Functions
+
 
     private void categoriesRecycler() {
         //All Gradients
@@ -142,7 +187,6 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
         categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         categoriesRecycler.setAdapter(adapter);
     }
-
     private void mostViewedRecycler() {
         mostViewedRecycler.setHasFixedSize(true);
         mostViewedRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -156,7 +200,6 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
         adapter = new MostViewedAdpater(mostViewedLocations);
         mostViewedRecycler.setAdapter(adapter);
     }
-
 
     private void featuredRecycler() {
 
@@ -176,14 +219,6 @@ public class UserDashBoard extends AppCompatActivity implements NavigationView.O
     }
 
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return true;
-    }
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else
-            super.onBackPressed();
-    }
+
+
 }

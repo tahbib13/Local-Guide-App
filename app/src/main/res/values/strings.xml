@@ -42,7 +42,7 @@
 
 
     <!-- String For Navigation -->
-    
+
     <string name="home">HOME</string>
     <string name="search">SEARCH</string>
     <string name="all_categories">ALL CATEGORIES</string>
@@ -54,5 +54,31 @@
     <string name="share">SHARE</string>
     <string name="rate_us">RATE US</string>
 
+    <string name="car_rent">CAR RENT</string>
+    <string name="expand_all">EXPAND ALL</string>
+    <string name="hospitals">HOSPITALS</string>
+    <string name="library">LIBRARY</string>
+    <string name="atm">ATMs</string>
+    <string name="mosque">MOSQUE</string>
+    <string name="resort">RESORT</string>
+
+
+    <string name="sign_up">SIGN UP</string>
+    <string name="retailer_heading">GROW YOUR BUSINESS</string>
+    <string name="retailer_tag_line">We will help you to grow your business using online services</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="how_we_work">HOW WE WORK</string>
+    <string name="remember_me">REMEMBER ME</string>
+    <string name="forget_password">FORGET PASSWORD</string>
+    <string name="enter_username">ENTER USERNAME</string>
+    <string name="enter_password">ENTER PASSWORD</string>
+    <string name="enter_full_name">ENTER FULL NAME</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_phone_number">PHONE NUMBER</string>
+    <string name="todo">TO DO</string>
+    <string name="otp_code_text">CODE</string>
+    <string name="otp_verification_text">VERIFICATIONS</string>
+    <string name="otp_description_text">Enter one Time Password</string>
+    <string name="verify_code">Verify Code</string>
 
 </resources>
